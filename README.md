@@ -1,39 +1,19 @@
-```mermaid
 sequenceDiagram
-    participant browser
-    participant server
-
-    browser->>server: POST /exampleapp/new_note
-
-    activate server
-
-    Note left of server: Server responds with HTTP status code 302
-
-    deactivate server
-
-
-    Note right of browser: Browser reloads the Notes page
+    participant Browser
+    participant Server
     
-    browser->>server: GET /exampleapp/notes
-    activate server
-    server-->>browser: HTML file 
-    deactivate server
+    Browser->>Server: HTTP GET /exampleapp/spa
+    Server->>Browser: HTML document
     
-    browser->>server: GET /exampleapp/main.css
-    activate server
-    server-->>browser: CSS file
-    deactivate server
+    Browser->>Server: HTTP GET /exampleapp/main.css
+    Server->>Browser: CSS file
     
-    browser->>server: GET /exampleapp/main.js
-    activate server
-    server-->>browser: JavaScript file
-    deactivate server
+    Browser->>Server: HTTP GET /exampleapp/spa.js
+    Server->>Browser: JavaScript file
     
-    Note right of browser: Browser executes JavaScript code to fetch JSON data
+    Note right of Browser: JavaScript fetches data.json
     
-    browser->>server: GET /exampleapp/data.json
-    activate server
-    server-->>browser: JSON data
-    deactivate server
-
-    Note right of browser: Browser renders notes using callback function
+    Browser->>Server: Request for data.json
+    Server->>Browser: JSON Response
+    
+    Note right of Browser: Callback function renders notes   
