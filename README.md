@@ -1,20 +1,14 @@
 ```mermaid
 sequenceDiagram
-    participant Browser
-    participant Server
-    
-    Browser->>Server: HTTP GET /exampleapp/spa
-    Server->>Browser: HTML document
-    
-    Browser->>Server: HTTP GET /exampleapp/main.css
-    Server->>Browser: CSS file
-    
-    Browser->>Server: HTTP GET /exampleapp/spa.js
-    Server->>Browser: JavaScript file
-    
-    Note right of Browser: JavaScript fetches data.json
-    
-    Browser->>Server: Request for data.json
-    Server->>Browser: JSON Response
-    
-    Note right of Browser: Callback function renders notes   
+    participant browser
+    participant server
+
+    browser->>server: HTTP POST /exampleapp/new_note_spa
+    activate server
+    server-->>browser: Status code 201 Created
+    Note left of server: Browser stays on the same page\nNo further requests sent.
+    deactivate server
+
+    %% Styling
+    style browser fill:#5cb85c,stroke:#333,stroke-width:2px,font-size:16px,font-weight:bold;
+    style server fill:#5bc0de,stroke:#333,stroke-width:2px,font-size:16px,font-weight:bold;
