@@ -6,5 +6,5 @@ sequenceDiagram
     browser->>server: HTTP POST /exampleapp/new_note_spa
     activate server
     server-->>browser: Status code 201 Created
-    Note left of server: Browser stays on the same page\nNo further requests sent.
+    Note left of server: Browser stays on the same page No further requests sent.
     deactivate server
