@@ -10,5 +10,5 @@ sequenceDiagram
     deactivate server
 
     %% Styling
-    style browser fill:#5cb85c,stroke:#333,stroke-width:2px,font-size:16px,font-weight:bold;
-    style server fill:#5bc0de,stroke:#333,stroke-width:2px,font-size:16px,font-weight:bold;
+    style browser fill:#5cb85c,stroke:#333,stroke-width:2px,font-size:16px,font-weight:bold
+    style server fill:#5bc0de,stroke:#333,stroke-width:2px,font-size:16px,font-weight:bold
