@@ -1,10 +1,7 @@
-```mermaid
-sequenceDiagram
-    participant browser
-    participant server
+# Full Stack Open (University of Helsinki)
 
-    browser->>server: HTTP POST /exampleapp/new_note_spa
-    activate server
-    server-->>browser: Status code 201 Created
-    Note left of server: Browser stays on the same page No further requests sent.
-    deactivate server
+<br>
+
+<img src="https://github.com/prajjwalyd/full-stack-open/assets/111794524/a19fb74c-2703-4550-b5ad-78e0d36f1dab" width="200">
+
+<br>
