@@ -1,40 +1,39 @@
-
 ```mermaid
 sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    browser->>server: POST /exampleapp/new_note
 
     activate server
 
-    Note left of server: server responds with HTTP status code 302 and asks the browser to do a new HTTP GET request
+    Note left of server: Server responds with HTTP status code 302
 
     deactivate server
 
 
-    Note right of browser: The browser reloads the Notes page
+    Note right of browser: Browser reloads the Notes page
     
-    browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET /exampleapp/notes
     activate server
-    server-->>browser: The HTML file 
+    server-->>browser: HTML file 
     deactivate server
     
-    browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    browser->>server: GET /exampleapp/main.css
     activate server
-    server-->>browser: The CSS file
+    server-->>browser: CSS file
     deactivate server
     
-    browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET /exampleapp/main.js
     activate server
-    server-->>browser: The Javascript file
+    server-->>browser: JavaScript file
     deactivate server
     
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON data from the server
+    Note right of browser: Browser executes JavaScript code to fetch JSON data
     
-    browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    browser->>server: GET /exampleapp/data.json
     activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-09-21" }, ... ]
+    server-->>browser: JSON data
     deactivate server
 
-    Note right of browser: The browser executes the callback function that renders the notes
+    Note right of browser: Browser renders notes using callback function
