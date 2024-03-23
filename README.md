@@ -15,3 +15,21 @@
  <li>General info</li>
  <li>Fundamentals of Web apps</li>
 </ol>
+
+### Part 1: Introduction to React
+
+<ol type="a">
+ <li>Introduction to React</li>
+ <li>JavaScript</li>
+ <li>Component state, event handlers</li>
+ <li>A more complex state, debugging React apps</li>
+</ol>
+
+### Part 1: Communicating with server
+<ol type="a">
+ <li>a Rendering a collection, modules</li>
+ <li>Forms</li>
+ <li>Getting data from server</li>
+ <li>Altering data in server</li>
+ <li>e Adding styles to React app</li>
+</ol>
