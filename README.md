@@ -11,14 +11,14 @@
 
 ### Part 0: Fundamentals of Web apps
 
-<ol type="a">
+<ol type="1">
  <li>General info</li>
  <li>Fundamentals of Web apps</li>
 </ol>
 
 ### Part 1: Introduction to React
 
-<ol type="a">
+<ol type="1">
  <li>Introduction to React</li>
  <li>JavaScript</li>
  <li>Component state, event handlers</li>
@@ -26,7 +26,7 @@
 </ol>
 
 ### Part 2: Communicating with server
-<ol type="a">
+<ol type="1">
  <li>a Rendering a collection, modules</li>
  <li>Forms</li>
  <li>Getting data from server</li>
