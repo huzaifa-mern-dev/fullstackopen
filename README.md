@@ -25,7 +25,7 @@
  <li>A more complex state, debugging React apps</li>
 </ol>
 
-### Part 1: Communicating with server
+### Part 2: Communicating with server
 <ol type="a">
  <li>a Rendering a collection, modules</li>
  <li>Forms</li>
